@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Website Title -->
+    <title>BYBIT Trading</title>
+    <!-- 
+    <meta
+      name="keywords"
+      content=""
+    />
+    <meta
+      name="description"
+      content=""
+    />
+
+    <meta name="author" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="nositelinkssearchbox" />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/default-favicon.ico"
+      type="image/x-icon"
+    /> -->
+
+    <!-- Google Fonts -->
+    <!-- Preconnecting can help reduce the latency when actual requests are made to this domain, such as when fetching font resources. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/responsive.css" />
+  </head>
+  <body>
+    <!---------- Header----------->
+    <header>
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODciIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCA4NyAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYyLjAwODMgMjUuMzU3MlYzSDY2LjUwMjJWMjUuMzU3Mkg2Mi4wMDgzWiIgZmlsbD0iI0Y3QTYwMCIvPgo8cGF0aCBkPSJNOS42MzQwNyAzMS45OTgzSDBWOS42NDExMUg5LjI0NjY2QzEzLjc0MDYgOS42NDExMSAxNi4zNTkxIDEyLjA5MDMgMTYuMzU5MSAxNS45MjE0QzE2LjM1OTEgMTguNDAxMyAxNC42Nzc0IDIwLjAwMzkgMTMuNTEzNCAyMC41Mzc1QzE0LjkwMjggMjEuMTY1MiAxNi42ODEzIDIyLjU3NzkgMTYuNjgxMyAyNS41NjI0QzE2LjY4MTMgMjkuNzM3MyAxMy43NDA2IDMxLjk5ODMgOS42MzQwNyAzMS45OTgzWk04Ljg5MDk2IDEzLjUzNTVINC40OTM5VjE4LjY4NTJIOC44OTA5NkMxMC43OTgxIDE4LjY4NTIgMTEuODY1MiAxNy42NDg4IDExLjg2NTIgMTYuMTA5NUMxMS44NjUyIDE0LjU3MTkgMTAuNzk4MSAxMy41MzU1IDguODkwOTYgMTMuNTM1NVpNOS4xODE1MSAyMi42MTA0SDQuNDkzOVYyOC4xMDU2SDkuMTgxNTFDMTEuMjE4OSAyOC4xMDU2IDEyLjE4NzQgMjYuODUwMyAxMi4xODc0IDI1LjM0MThDMTIuMTg3NCAyMy44MzUgMTEuMjE3MSAyMi42MTA0IDkuMTgxNTEgMjIuNjEwNFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0zMC4zODgyIDIyLjgyOTNWMzEuOTk4M0gyNS45MjZWMjIuODI5M0wxOS4wMDczIDkuNjQxMTFIMjMuODg4NkwyOC4xODg4IDE4LjY1MjdMMzIuNDIzOSA5LjY0MTExSDM3LjMwNTJMMzAuMzg4MiAyMi44MjkzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTUwLjA0NTcgMzEuOTk4M0g0MC40MTE2VjkuNjQxMTFINDkuNjU4M0M1NC4xNTIyIDkuNjQxMTEgNTYuNzcwNyAxMi4wOTAzIDU2Ljc3MDcgMTUuOTIxNEM1Ni43NzA3IDE4LjQwMTMgNTUuMDg5IDIwLjAwMzkgNTMuOTI1IDIwLjUzNzVDNTUuMzE0NCAyMS4xNjUyIDU3LjA5MyAyMi41Nzc5IDU3LjA5MyAyNS41NjI0QzU3LjA5MyAyOS43MzczIDU0LjE1MjIgMzEuOTk4MyA1MC4wNDU3IDMxLjk5ODNaTTQ5LjMwMjYgMTMuNTM1NUg0NC45MDU1VjE4LjY4NTJINDkuMzAyNkM1MS4yMDk3IDE4LjY4NTIgNTIuMjc2OCAxNy42NDg4IDUyLjI3NjggMTYuMTA5NUM1Mi4yNzY4IDE0LjU3MTkgNTEuMjA5NyAxMy41MzU1IDQ5LjMwMjYgMTMuNTM1NVpNNDkuNTkzMSAyMi42MTA0SDQ0LjkwNTVWMjguMTA1Nkg0OS41OTMxQzUxLjYzMDUgMjguMTA1NiA1Mi41OTkgMjYuODUwMyA1Mi41OTkgMjUuMzQxOEM1Mi41OTkgMjMuODM1IDUxLjYzMDUgMjIuNjEwNCA0OS41OTMxIDIyLjYxMDRaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNODAuOTg2IDEzLjUzNTVWMzJINzYuNDkyMVYxMy41MzU1SDcwLjQ3ODVWOS42NDExMUg4Ni45OTk2VjEzLjUzNTVIODAuOTg2WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg== "
+              alt=""
+          /></a>
+        </div>
+        <div class="header-block">
+          <div class="header-block-menu-link">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVHgB7drNTQMxEAXgtwgBkThQwtIBVEAoA7iQCqADoIRUEC7UQaiAUAEpgQPiR0IaZsMGcXFmslpjW3qfZAVky5t9meXHGoCIiKhUFQojE+x9bOFC3/lQvx2ig0ow+wLGu2e4NdeiIO8T1NjGvX5Zox9zfOJ4MNLXgA2UpN9wsNhL92yqMrRgrYBEZE/HlY576e5RxznW9HqHc/QbzlL9toXL0KQ7IL2pWl8edVyj47PfOtAx0f2e2z1dNiv9uRPJRoWj4Bz8+i9v3bOpSs9i+Qk2lmFowhVQ+0jU6F+t4xIZ81ZQtPJWR8iYN6Ak5Z2Dsn7NJ8CADAzIwIAMDMjAgAwMyMCADAzIwIAMJQU0RSR6UjALzZUTkOABkegZ9Tg4B4fmGBARVcpaszis314c2NXo13xwiv3QpLeCpohn5llUjfCiH+cxED5g72De7hnkDShaeauxd+HgpP20BSOt6Sd0JM39CG52PnHY7LlqrfcRa45Fo5S3Pl37yJirgvQmXvSl//LG6vIuUnM+rWMm3U11XHsP64mIiOhfSKLuDknYVbLOm6zlpyOjL8/i6O5Idd0ld4dZszEi/Kuh47D9Sz2r6y5l3d0hGXSV5N7dkbyrJOsDs1TX/YuH9gYGZGBABgZkYEAGBmRgQAYGZGBABgZkYEAGBmRgQIbcuzumSHPdX7l3dyTvKsm6u0My6CrJurujyK4SSdTdIewqISIiIqKcfAPjxe2fX/FuhAAAAABJRU5ErkJggg=="
+              alt=""
+            />
+          </div>
+          <div class="header-block-menu-dropdown">
+            <div class="header-block-menu-dropdown-container">
+              <div class="header-block-menu-dropdown-left">
+                <h2>Promotions</h2>
+                <div class="header-block-promotions">
+                  <a href="">
+                    <div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>VIP Program</h4>
+                        <span
+                          >Get exclusive accsess to fee discounts and more</span
+                        >
+                      </div>
+                    </div></a
+                  >
+                  <a href=""
+                    ><div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>Referral Program</h4>
+                        <span
+                          >Invite Friends to earn up to 1025USDT and 30%
+                          Commision</span
+                        >
+                      </div>
+                    </div></a
+                  >
+                  <a href="">
+                    <div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>Lending <span>NEW</span></h4>
+                        <span>Lend Idle Assets for Hourly Intesrest</span>
+                      </div>
+                    </div></a
+                  >
+                  <a href="">
+                    <div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>Affiliate Program</h4>
+                        <span>Convert your influence into afluence</span>
+                      </div>
+                    </div></a
+                  >
+                  <a href="">
+                    <div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>Rewards Hub</h4>
+                        <span
+                          >Complete simple tasks to claim rewards deals
+                        </span>
+                      </div>
+                    </div></a
+                  >
+                  <a href="">
+                    <div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>Broker Program <span>NEW</span></h4>
+                        <span>100% rebate on spot</span>
+                      </div>
+                    </div></a
+                  >
+                  <a href="">
+                    <div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>Instituitional Services</h4>
+                        <span
+                          >Bespoke trading solutions, Ultra low fee rates,
+                          Costumized Support</span
+                        >
+                      </div>
+                    </div></a
+                  >
+                  <a href="">
+                    <div class="promotion-item">
+                      <div class="promotion-item-left">
+                        <i class="fas fa-fire"></i>
+                      </div>
+                      <div class="promotion-item-right">
+                        <h4>Bybit Card Referral Program</h4>
+                        <span
+                          >Invite a friend to get a card and unlock rewards
+                          together</span
+                        >
+                      </div>
+                    </div></a
+                  >
+                </div>
+              </div>
+              <div class="header-block-menu-dropdown-right">
+                <div class="header-block-learn">
+                  <h2>Learn</h2>
+                  <ul>
+                    <li>
+                      <a href="">Announcements <span>New</span></a>
+                    </li>
+                    <li><a href="">Bybit Learn</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Help Center</a></li>
+                    <li><a href="">Submit a Request</a></li>
+                    <li><a href="">Bybit Market Overview</a></li>
+                    <li><a href="">Bybit Communities</a></li>
+                    <li><a href="">ABout Us</a></li>
+                    <li><a href="">User Security</a></li>
+                    <li><a href="">Authenticity Check</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-main-nav">
+          <nav>
+            <div class="header-main-nav-links">
+              <a href="">Buy Crypto</a>
+
+              <div class="header-main-nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="">
+                      <h5>One Click Buy</h5>
+                      <span>Buy Crypto Within Seconds</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>
+                        P2P Trading (0 Fees)
+                        <i class="fas fa-fire"></i>
+                      </h5>
+                      <span
+                        >50+ Fiat Currencies and Various Popular Local Payment
+                        Methods with Best Price</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Fiat Deposit</h5>
+                      <span>Top up Balance Via Bank Transfer or Bank Card</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Crypto Deposit</h5>
+                      <span>Instants Crypto Deposits to Your Account</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-main-nav-links">
+              <a href="">Markets</a>
+              <div class="header-main-nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="">
+                      <h5>Market Overview</h5>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Launch</h5>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-main-nav-links">
+              <a href="">Trade</a>
+              <div class="header-main-nav-dropdown">
+                <ul>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>Spot Trading</h5>
+                      <span>Buy and Sell on the Spot</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>
+                        Convert
+                        <i class="fas fa-fire"></i>
+                      </h5>
+                      <span
+                        >Quick Conversation with zero fees and no slippage</span
+                      >
+                    </a>
+                  </li>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>Margin Trading</h5>
+                      <span>Invest with borrowed funds to boost returns</span>
+                    </a>
+                  </li>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>Leveraged Tokens</h5>
+                      <span>Expands your Derivatives Trading experience</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>
+                        Trading Bots
+                        <i class="fas fa-fire"></i>
+                      </h5>
+                      <span>Smart Trades Made Easy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Launchpad</h5>
+                      <span>Easy Access to New Tokens</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>ByVotes</h5>
+                      <span>Vote for Your Favourite Listings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>
+                        ByStarter
+                        <span>New</span>
+                      </h5>
+                      <span
+                        >Your Head Start to Next Level Web3 Innovations</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-main-nav-links">
+              <a href="">Derivatives</a>
+              <div class="header-main-nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="">
+                      <h5>Derivatives Portal</h5>
+                      <span>One-stop platform for all things Derivatives</span>
+                    </a>
+                  </li>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>USDT Perpetual</h5>
+                      <span
+                        >Perpetual Contract using USDT as the collateral
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Copy Trading <i class="fas fa-fire"></i></h5>
+                      <span>Let top traders work for you</span>
+                    </a>
+                  </li>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>
+                        USDC Contracts
+                        <i class="fas fa-fire"></i>
+                      </h5>
+                      <span
+                        >Perpetual and Futures Contracts settled in USDC</span
+                      >
+                    </a>
+                  </li>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>
+                        USDC Options
+                        <i class="fas fa-fire"></i>
+                      </h5>
+                      <span>Options Contract using USDC as the collateral</span>
+                    </a>
+                  </li>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>Inverse Contracts</h5>
+                      <span
+                        >Perpetual and Future Contracts using the coin itself as
+                        collateral</span
+                      >
+                    </a>
+                  </li>
+                  <li class="header-sub-nav-links">
+                    <a href="">
+                      <h5>More to Derivatives Trading</h5>
+                      <span
+                        >Upgarde your trading experinece with optimized products
+                        and trading tools</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Demo Trading <i class="fas fa-fire"></i></h5>
+                      <span
+                        >Practice trading without risking your own capital</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-main-nav-links">
+              <a href="">Tools</a>
+              <div class="header-main-nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="">
+                      <h5>Tools Discovery</h5>
+                      <span
+                        >Discover tools tailored to your trading style
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>
+                        TradeGPT
+                        <span>NEW</span>
+                      </h5>
+                      <span>Leveraged on AI-powered trading</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Copy Trading <i class="fas fa-fire"></i></h5>
+                      <span>Let top traders work for you</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Trading Bot</h5>
+                      <span>Smart Traders Made Easy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Leaderboard</h5>
+                      <span
+                        >Access a variety of trading tools to power up your
+                        trading experience</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>MetaTrader 4</h5>
+                      <span
+                        >Harness the power of auto trading and advanced
+                        indicators</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Position Builder</h5>
+                      <span
+                        >Simulate Pnl for Perp/Futures/Options Combos before
+                        placing order</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-main-nav-links">
+              <a href="">Finance</a>
+              <div class="header-main-nav-dropdown">
+                <ul>
+                  <li class="header-sub-nav-links">
+                    <a>
+                      <h5>Earn</h5>
+                      <span>Easy access to grow your crypto</span>
+                    </a>
+                    <div class="header-sub-nav-dropdown">
+                      <ul>
+                        <li>
+                          <a href="">
+                            <h5>
+                              Overview
+                              <span>NEW</span>
+                            </h5>
+                            <span
+                              >Browse a variety of financial investment products
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <h5>Bybit Savings</h5>
+                            <span
+                              >Get Guaranteed yields and withdraw your deposited
+                              token sanytime</span
+                            >
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <h5>Liquidity Mining</h5>
+                            <span
+                              >Add liquidity and earn trading fees like
+                              professional market makers</span
+                            >
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <h5>Dual Assets <i class="fas fa-fire"></i></h5>
+                            <span>Get high yield despite prive volatility</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <h5>Double-Win <span>NEW</span></h5>
+                            <span
+                              >Profit big form intense market movements</span
+                            >
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <h5>Wealth Management</h5>
+                            <span
+                              >Maximize the Wealth, Minimize the hassle</span
+                            >
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <h5>ETH 2.0</h5>
+                            <span
+                              >Earn Yield while trading with your staked
+                              ETH</span
+                            >
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <h5>Launchpool</h5>
+                            <span>Stake and harvest new token for free</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>
+                        Landing
+                        <span>NEW</span>
+                      </h5>
+                      <span>Land Idle Assets for Hourly Interest </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Crypto Loans</h5>
+                      <span>High LTV Crypto Loans. Repay Anytime</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>Cards <i class="fas fa-fire"></i></h5>
+                      <span>Spend Crypto Instantly & Globally</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-main-nav-links">
+              <a href="">Web3</a>
+              <div class="header-main-nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="">
+                      <h5>Bybit Wallet</h5>
+                      <span
+                        >Access to Bybit Wallet and explore popular DApps
+                        worry-free</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>
+                        Apex
+                        <span>NEW</span>
+                      </h5>
+                      <span
+                        >Scale derivaties trades on a non-custodial multi-chain
+                        Dex</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <h5>NFT</h5>
+                      <span>Explore NFTs from creators worldwide</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="header-searchbar">
+          <div class="header-searchbar-input">
+            <input type="text" placeholder="Search Coin" />
+          </div>
+        </div>
+        <div class="sidebar-btn">
+          <div class="sidebar-btn-link">
+            <img src="./assets/kyc.png" alt="" />
+            <span>2</span>
+          </div>
+          <div class="sidebar-slider">
+            <div class="sidebar-slider-container">
+              <div class="sidebar-slider-part-1">
+                <span>Main Account</span>
+                <div class="sidebar-user">
+                  <div class="sidebar-user-left">
+                    <img src="./assets/kyc.png" alt="" />
+                  </div>
+                  <div class="sidebar-user-right">
+                    <h4>timjohn123@****.com</h4>
+                    <span>UID: 12345678 <i class="fal fa-copy"></i> </span>
+                  </div>
+                </div>
+                <button>Switch/Create Account</button>
+                <div class="siderbar-btns">
+                  <button>
+                    <a href=""><i class="far fa-arrow-to-bottom"></i>Deposit</a>
+                  </button>
+                  <button>
+                    <a href=""><i class="far fa-arrow-to-top"></i>Withdraw</a>
+                  </button>
+                </div>
+              </div>
+              <div class="sidebar-slider-part-2">
+                <ul>
+                  <li>
+                    <p class="sidebar-slider-link">
+                      Assets
+                      <span class="sidebar-btn-link-caret">
+                        <i class="fas fa-caret-down"></i
+                      ></span>
+                    </p>
+                    <div class="sidebar-slider-dropdown">
+                      <ul>
+                        <li><a href="">Funding Account</a></li>
+                        <li><a href=""> Assets Overview</a></li>
+                        <li><a href="">Unified Trading Account</a></li>
+                        <li><a href="">Inverse Derivatives Account</a></li>
+                        <li><a href="">Earn</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="sidebar-slider-link">
+                      Orders<span class="sidebar-btn-link-caret">
+                        <i class="fas fa-caret-down"></i
+                      ></span>
+                    </p>
+
+                    <div class="sidebar-slider-dropdown">
+                      <ul>
+                        <li>
+                          <a href="">Unified Trading Order</a>
+                        </li>
+
+                        <li><a href="">Inverse Derivatives Order</a></li>
+                        <li><a href=""> Buy Crypto Order</a></li>
+                        <li><a href="">Earn Order</a></li>
+                        <li><a href="">Learn Order</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <hr />
+              <div class="sidebar-slider-part-3">
+                <ul>
+                  <li>
+                    <a href="">Account & Security</a>
+                  </li>
+
+                  <li><a href="">My Fee Rates</a></li>
+                  <li>
+                    <a href=""> My Rewards <span> 2</span></a>
+                  </li>
+                  <li><a href="">Referral Program</a></li>
+                  <li><a href="">Subaccount</a></li>
+                  <li><a href="">API</a></li>
+                  <li><a href="">Audit</a></li>
+                  <li><a href="">Setting</a></li>
+                </ul>
+              </div>
+              <hr />
+              <div class="sidebar-slider-part-4">
+                <ul>
+                  <li>
+                    <a href=""
+                      >Demo Trading <span><i class="fas fa-fire"></i></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="log-out">
+              <button class="log-out-btn">Logout</button>
+            </div>
+          </div>
+        </div>
+        <div class="notifications-btn">
+          <div class="notifications-btn-link">
+            <i class="far fa-bell"></i>
+            <span>10</span>
+          </div>
+          <div class="notifications-btn-dropdown">
+            <div class="new-notifications">
+              <h5>10 <span>New Notifications</span></h5>
+
+              <span>
+                <a href="">View More <i class="fal fa-arrow-right"></i></a>
+              </span>
+            </div>
+            <div class="notifications">
+              <div class="notification-bar">
+                <div class="notification-left"><i class="far fa-flag"></i></div>
+                <div class="notification-right">
+                  <h4>Lorem Ipsum Lorem Ipsum</h4>
+                  <p>It is a long established fact that a reader will be ...</p>
+                  <span>Yesterday 10:45</span>
+                </div>
+              </div>
+              <div class="notification-bar">
+                <div class="notification-left"><i class="far fa-flag"></i></div>
+                <div class="notification-right">
+                  <h4>Lorem Ipsum Lorem Ipsum</h4>
+                  <p>It is a long established fact that a reader will be ...</p>
+                  <span>Yesterday 10:45</span>
+                </div>
+              </div>
+              <div class="notification-bar">
+                <div class="notification-left"><i class="far fa-flag"></i></div>
+                <div class="notification-right">
+                  <h4>Lorem Ipsum Lorem Ipsum</h4>
+                  <p>It is a long established fact that a reader will be ...</p>
+                  <span>Yesterday 10:45</span>
+                </div>
+              </div>
+              <div class="notification-bar">
+                <div class="notification-left"><i class="far fa-flag"></i></div>
+                <div class="notification-right">
+                  <h4>Lorem Ipsum Lorem Ipsum</h4>
+                  <p>It is a long established fact that a reader will be ...</p>
+                  <span>Yesterday 10:45</span>
+                </div>
+              </div>
+              <div class="notification-bar">
+                <div class="notification-left"><i class="far fa-flag"></i></div>
+                <div class="notification-right">
+                  <h4>Lorem Ipsum Lorem Ipsum</h4>
+                  <p>It is a long established fact that a reader will be ...</p>
+                  <span>Yesterday 10:45</span>
+                </div>
+              </div>
+              <div class="notification-bar">
+                <div class="notification-left"><i class="far fa-flag"></i></div>
+                <div class="notification-right">
+                  <h4>Lorem Ipsum Lorem Ipsum</h4>
+                  <p>It is a long established fact that a reader will be ...</p>
+                  <span>Yesterday 10:45</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="download-btn">
+          <div class="download-btn-link">
+            <i class="fal fa-arrow-to-bottom"></i>
+          </div>
+          <div class="download-btn-dropdown">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABGoAAARqBAMAAADimY41AAAAJ1BMVEX///8AAAAWGSr3pgCKjJSLjJVQU1/FxcqAgIC/v79AQECJYRU2LSRbtavdAAAVm0lEQVR42uzS0QmAMBAFwbRg/83aQSAc6gozv0I4ebsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPil6y1HZ+y/fvW/ZzdvNVdQjWpUoxrVqKa5gmpUoxrVqEY1zRVUoxrVqEY1qmmuoBrVqEY1qlFNcwXVqEY1qlGNaporqEY1qlGNalTTXEE1qlGNalSjmuYKqlGNalSjGtU0V1CNalSjGtWoprmCalSjGtWUq1kz8xDmRz6x7TzA5gqtV1WjGtWopnGvagortF5VjWpUo5rGvaoprNB6VTU3O3eMwjAQBEFQ/3+1MwuUicPQY+pSw2qgKzY11FDT2EtNoULrKjXUUENNYy81hQqtq9RQQw01jb3UFCq0rlJDDTXUNPZSU6jQukoNNdRQ09hLTaFC6yo11FBDTWMvNYUKravUUEMNNY291BQqtK5SQw011Ly5Gvmjjqblk+9GKlBDDTXfRw011FBDDTXUUEMNNdQE6lFzUUMNNdRQcz9qqKGGGmqooYYaaqihJlCPmosaaqihhpr7UUMNNdRQQw011FBDDTWBetRc1FBDDTXU3I8aaqihhhpqqKEmrubxTi5HPvT4dbHC2l5qChXW9lJTqLC2l5pChbW91BQqrO2lplBhbS81hQpre6kpVFjbS02hwtpeagoV1vZSU6iwtpeaQoW1vdQUKqztpaZQYW0vNYUKa3upKVRY20tNocLaXmoKFdb2UlOosLaXmkKFtb3UFCqs7aWmUGFtLzWFCmt7qSlUWNtLTaHC2l5qChXW9lJTqLC2l5pChbW91BQqrO2lplBhbe9R+Tfvdx/6gwpre6kpVFjbS02hwtpeagoV1vZSU6iwtpeaQoW1vdQUKqztpaZQYW0vNYUKa3upKVRY20tNocLaXmoKFdb2UlOosLaXmkKFtb3UFCqs7aWmUGFtLzWFCmt7qSlUWNtLTaHC2l5qChXW9lJTqLC2l5pChbW91BQqrO2lplBhbS81hQpre6n5sHPHOArFUBAE73/rDSdxxoL7Q3X6ELI0RUphhae9l5rCCk97LzWFFZ72XmoKKzztvdQUVnjlvYFv/tifi0R+Fs0VqKGGGmqooaa5AjXUUEMNNdQ0V6CGGmqooYaa5grUUEMNNdRQ01yBGmqooYYaaporUEMNNdRQQ01zBWqooYYaaqhprkANNdRQQw01zRWooYYaaqihprkCNdRQQ01KzRs6v9e1sAI1X3Rd1BT3aV4XNcV9mtdFTXGf5nVRU9yneV3UFPdpXhc1xX2a10VNcZ/mdVFT3Kd5XdQU92leFzXFfZrXRU1xn+Z1UVPcp3ld1BT3aV4XNcV9mtdFTXGf5nVRU9yneV3UFPdpXhc1xX2a10VNcZ/mdVFT3Kd5XdQU92leFzXFfZrXRU1xn+Z1UVPcp3ld1BT3aV4XNcV9mtdFTXGf5nVRU9yneV1RNZFeAvg2vL+0wBOjRtToFDXU3I8aUaNT1FBzP2pEjU5RQ839qBE1OkUNNfejRtToFDXU3I8aUaNT1FBzP2pEjU5RQ839qBE1OkUNNfejRtToFDXU3I8aUfNbvWG984c/tt6FP1M59Y/ierSpoYYaag5RQw011FBDDTXUUEMNNdRQQw011FBDDTXUUEMNNX/s3DFOw1AQRdHpSEq6KOthQRRItKYjdJSh804RVST4TeTYMxPObS35WcqR01ifGmqooYYaaqihhhpqqKGGGmqooYYaaqihhhpqqPkbNdRQQw011FBDDTXUUEMNNVuqeVytNZ5quZqOuwWYUNNulxpqqKGGGmpq7lJDDTXUUENNzV1qqKGGGmqoqblLDTXUUEMNNTV3qaGGGmqooabmLjXUUEMNNdTU3KWGGmqooYaamrvUUEMNNdRQU3OXGmqooYYaamruUkPNPaipeWzJkjsvuboGhOXdlylqqKGGmlHUUJMfNdRQQ80oaqjJjxpqqKFmFDXU5EcNNdRQM4oaavKjhhpqqBlFDTX5UUMNNdSMooaa/KihhhpqRlFDTX7UUEMNNaOooSY/aqihhppR1FCTHzXUUEPNKi42u3ORE1CuulrkMX5FDTXUUEMNNUUegxpqqKGGGmqooYYaaqihhhpqqKGGGmqooYYaaqihhpqbqDm+n86xUeePmZo7UHM8xbadZ2q6q3mP7fuiprWawxQZ7Wdq+qo5RFL7mZquahLQXNhQ01NNCpoLG2paqpkis/1MTUM1U+S2o6afmkNk90lNNzXHSG8/U9NMzRT57ajppSb//+mnN2paqanwqonYUdNJTY1XTcQ/VnPD71xueOe4ooeXp216fa7xyxc4iaS7mm927hi1gRiKoigJg9OmTTc8xHgbg8hCghu3w+wkOw6pkuYVBjNfz763ViHQab4EmrqOa9lQ8whqPnVs1w018Wq6jm7ZUBOupuv4Gmqy1XRV1FCTrGZXTVfU5KqZVNWKmlg1XVU11KSqmVTXF2pC1VxU14KaTDUnVbaiJlJNV2UNNYlqJtW2oiZQza7azqgJVHNRcajJUzOpuhU1cWpeVd2Mmjg1XdU11KSpeVN9qElTc1J9K2rC1Oyqb0YNam6uoSZMTfltDWoC1WiEUJOlZoQRSlpRE6VmhBEKNWlq6m+Gf5tRgxrUPLiaEQZv6fzEam7ab/HijyHVfN/jfIb8EAU196+hJkLN+zAv3v/VvKAGNahBzV+osaHGhhobamyosaHGhhobamyosaHGhhobamyosaHGhhobamyosaHGhhobamyosaHGhhobamyosaHGhhobamyosaHGhhobamyosaHGhhobamyosaHGhhobamyosaHmh507OGEYhoIo2FBuKT+3VBbwZY3xJ2uIwIF5BQghBh13jJoxasaoGaNmjJoxasaoGaNmjJolXd+xWLefcfdl84Oaszvf5K1Oo6aNmkRNGzWJmjZqEjVt1CRq2qhJ1LRRk6hpoyZR00ZNoqaNmkRNGzWJmjZqEjVt1CRq2qhJ1LRRk6hpoyZR00ZNoqaNmkRNGzWJmjZqEjVt1CRq2qhJ1LRRk6hpoyZR00ZNoqaNmkRNGzWJmjZqEjVt1CRq2qhZ19L79kf9o5pDq5ik+yygUEMNNYmaXdSUUbOLmp/2eG29qaHmQs8tfw011ByjhhpqqKGGGmqooYYaaqihhhpqqKGGGmqooYYaaqj5HjXUUPNh535WnQaiAIwPhTRbH6EM5N6NDxMGWrcSsG5Lwfpw7nwyJcE5k/Gcmkatceb7Npc2GfEmP9LTfxc1qEENalCDGtSgpko1x7TT4GPdccxLH6Z9lFWmmu6oFVDzf6t5cfM+xTP66sYSEf14R+O/5+Y1wVDz3mntUFOWGufCfMs1YnhJtru8gJqq1UQAl/HWXh6yFDVSQE3VahrvkzPeRgwH2aqoaQfU1KzGXfXBptfUSHvUVK2m1Qeb9JHIKQ2okZ5h6vlHQtQoBW2w6X6l5vrH1WzkWG2gjRyJu2r2ymAjY42lpkGNVKGadjbYKGONd1qokSpU4wbZlj1ehTtqAmpiVag5jx0vMqIIlJ2MNZma07Sql1W5mpfz1LTL7Tw1oKYINfLseuyaDjb7RE3jUzXDfNU+VyO9n8/LqClKTTc7/6/JlHMw1IyhJq8qNb6P5182DrIhKGoiihY1sbrUvM4uKRc52e6emlfUZNWsRgYbGWs0NR1qsupSI+dfDLVxrNlpauRfQU2sRjXNfOsgY42uxnOtyapZjQw2spt6rUFNVl1qXuMkkw42gklRI9ZQE6tLjcwvs+F4+rlDzdLqUtMLj2SzjDW6mp5X+bKqUiPvNs08hOmHV9XI25yoidWk5uUiN9NHrKs8AmlqLqjJq0LNcezdxQmP2es32Vjj9VWoiVWhRsrPrv7lFae0R41UoRqf1Kt3O6WAmqTq1Ox90iHe3ehqZDNqpOrUtINP6pLPbUraKtSk1aYm+Fnq/doshJq02tQ0flavTTvKKtTMqk2Nu/m0Q2TBXLO8+tQ4dbDZeZ5DLa9CNXttsAm2Gl7l+6kK1bTaYJNJUhpQE6tCzXHqol1X5DstuZpP81VX1DypdX97Y31vFnyLTmaY7INa1ruX757xfSjprxPbvKmNqZFPyixWI6ta1BiVruYg53+hGtnFocaodDVye7EaWTWgRq90NeJhuRr5MyWo0StezWWVmn5SgRq9StSEZWpUFW+/jH1FTax4Nf3vqZG41kjFq1l3relRc6/i1bjfUBNQo1e6mm7dcyiHmnuVruawSk2HmruVrqZ//FU+WTWgRq9wNR/dWPOAGlnlPGr0ClVzHvvw2T2k5jQti6tQY1SomqzdEjUSan5ZDWrCKjUBNVZVqPGoQc2jappVahqPGqsa1IRVagJqzCpQ0/g1alqPGrvy1YRVagJq7MpXc/Nr1DQeNXbFq7n5NWo+edTcqXA17cmvUNPePGruVpiaY9rp7H+uGzcFn6avsvsw7jigpgw1zw01qEHN0lCDmn8falCzBRe/+F03qWbZsfp7R4OrCWpQgxrUoAY1qEHNj1Bjhhoz1Jihxgw1ZqgxQ40ZasxQY4YaM9SYocYMNWaoMUONGWrMUGOGGjPUmKHGDDVmqDFDjRlqzFBjhhoz1Jihxgw1ZqgxQ40ZasxQY4YaM9SYocYMNWaoMUONGWrMUGOGGjPUmKHGDDVmqDFDjRlqzFBjhpqnufh7/9+HDkwBap66sx1qHgs1qNlAqEENalCjhBrUbCDUoAY139i5Y92moSgO4weEiJPtbJCpsuTkdbJUrBFPUHWAFW8d8daO3uAtkbCdpsKqQhvdc/7N9+1JLN2f7z3OYNTMhBrUJAg1qEENamZCDWoShBrUoAY1M6EGNQlCDWpQg5qZUIOaBKEGNahBzUyoQU2CUIMa1KBmJtSgJkGoQQ1qUDMTalCTINSgBjWoKdEWNVJqbusMXbKaM15CsbdrvK8zNKnpTlqQJDfcbKgp1xVqUPNiNS1qJNR8qDO0t6EeNag5uRvUSKmxOkM25qjRUJPhD5uNDS1Rg5qT26JGTE2Gh6hJzQo1ImoyjMN7G3qHGhE1GcbhGxvqUKOiJn6waWysR42KmvjB5srGHDUqauIHm50NLVEjoyZ8sNnY2Ao1Ompu69i2NtahRkdN9BG1s7EeNTpqgp+iGjuMNagRUhO72ewPYw1qlNTY1zqujU11qJFS87GOa2dTPWqk1ARONo09jjWo0VITN9nsbGqFGjE19q2OaWuHWtSoqQk6oxo7tHTUyKkJYdPYYx1qBNUsyj9+N3ZUjxpBNbYoPdtc21GVo0ZRTeHtptnZcS1qRNWYLb5fl+mLPa3yi1Xz/G8meUOGP+mTKXTGO+yMl3G5avyHZahCjZSaHJtNixopNSk2m8pRo6Vm/dPC61EjpsY/W3Sto0ZNTfgZVTlq9NQEn1GVo0ZQTTCbFjWSakLZtI4aTTWBbFpHjaqaKDZV66jRVeP+28p3544aaTW+frCy3feOGnU17utfxeA83N/17qh5A2pe+dn/XVvUoAY1qEENalCDGtSgBjWoQQ1qUIMa1KAGNahBTY6VRw1qUIMa1KAGNahBDWpeWJKl9mcr8FXn91iKWPr3lKAGNahBzd9QgxrUoAY1qEENalCDGtSgBjWoQQ1qUIMa1KAGNahBDWpQgxrUoAY1qEENalCDGtSgBjWoQQ1qUIMa1KAGNaj5N9Sg5g87d4wbIRAAQfAN/P+zzpy1z0grw8jVKWgQUPFSQw011FBDDTXUUEMNNQfUnGXS7/qC81H+5of01fNRQw011FBDDTXUUEMNNdRQQw011FBDDTXUUEMNNdRQQ83nqKGGGmqooYYaaqihhhpqqKGGGmqooYYaaqihhhpqPkcNNdRQQw011FBDDTXUUEPN/1Lz8+pLPsyJr3j+6oQpaqih5jtqOmoqajpqKmo6aipqOmoqajpqKmo6aipqOmoqajpqKmo6aipqOmoqajpqKmo6aipqOmoqajpqKmo6aipqOmoqajpqKmo6aipqOmoqajpqKmo6aipqOmoqajpqKmo6aipqOmoqajpqKmo6aipqupeqeaqTLu508CCWxanxqKGGmpGp8aihhpqRqfGooYaakanxqKGGmpGp8aihhpqRqfGooYaakanxqKGGmpGp8aihhpqRqfGooYaakanxqKGGmpGp8aihhpqRqfGooYaakanxqKGGmpGp8aihhpqRqfGoWVZzne/877p98+uPabn1oBcwoYYaaqj5RdRQ83xXRg011FBDDTV3ooaa57syaqihhhpqqLkTNdQ835VR88XOHZwADAJBFK3B/ptNBbJZGFwT3j97EHlehxpqqKGGmk7UUDPf2kYNNdRQQw01naihZr61jRpqqKGGGmo6UUPNfGsbNdRQQw011HSihpr51jZqqKGGmkD5G33xJTJa+x1fbaGGGmqooYYaaqihhhpqqKGGmndRQw011FBDDTXUUEMNNdRQQw011FBDDTXUUEMNNdTUUUMNNdRQQw011FBDDTXUUEMNNdRQQw011FBDDTXU1FFzv5rwukbecv9wfiAk3527LNRQQw011FBDDTXUUEMNNdRQQw011FBDDTXUUEMNNdRQQw011FBDDTV11FBDDTXUUEMNNdRQQw011FBDDTXUUEMNNdRQQw01ddRQQw011FBDzc/VBE0leeaITXyaOmqooYYaaqihhhpqqKGGGmqooYYaaqihhhpqqKGGGmqooYYaaqihhhpqqKGGGmqooYYaaqihhhpqqKGGGmqooYYaaqihhhpqqKGGGmqooYaak2ruXBN52LmDE4aBIAiC+WftBGwLwQl67OoAxKCt9z2Hd+3pEWqooWZkBjVT54rMoGbqXJEZ1EydKzKDmqlzRWZQM3WuyAxqps4VmUHN1LkiM6iZOldkBjVT54rMoGbqXJEZ1EydKzKDmqlzRWZQM3WuyAxqps4VmUHN1LkiM6iZOldkBjVT54rMoGbqXJEZ1EydKzKDmqlzRWZQM3WuyAxqps4VmUHN1LkiM6iZOldkBjVT54rMoGbqXJEZ1EydKzLjn9TcKvISyVlT9yGc7yBPaqihhhpqqPkcNdRQQw011FBDDTXUUEMNNdRQQw011FBDDTXUUEPNddRQQw011FBDDTXUUEMNNdRQQw011FBDDTXUUEMNNddRQw011FBDDTXUUFNV81z3Zpx3cf6XNz1+/xQ11FBDDTXUUEMNNdRQQw011FBDDTXUUEMNNdRQQw011FBDDTXUUPM+aqihhhpqqKGGGmqooYYaaqihhhpqqKGGGmqooYYaaqihhhpqqKGGmp9TI0mSJEmSJEmSJEmSJEmS9GoPDgkAAAAABP1/7QsTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMArZ5M93QU6JCIAAAAASUVORK5CYII="
+              alt=""
+            />
+            <span>Scan To Downlaod App</span>
+            <button><a href="">More Download Options</a></button>
+          </div>
+        </div>
+        <div class="select-lang-btn trigger">
+          <div class="select-lang-btn-link"><i class="fal fa-globe"></i></div>
+        </div>
+      </div>
+    </header>
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-button"><i class="fal fa-times"></i></span>
+
+        <h3>Choose Your Language</h3>
+        <div class="lang-options">
+          <div class="by-lang-selector__item by-lang-selector__active">
+            <span>English</span>
+          </div>
+          <div class="by-lang-selector__item">
+            <span>Bahasa Indonesia</span>
+          </div>
+          <div class="by-lang-selector__item">
+            <span>Español (Internacional)</span>
+          </div>
+          <div class="by-lang-selector__item">
+            <span>Español (México)</span>
+          </div>
+          <div class="by-lang-selector__item">
+            <span>Español (Argentina)</span>
+          </div>
+          <div class="by-lang-selector__item"><span>Filipino</span></div>
+          <div class="by-lang-selector__item"><span>Қазақша</span></div>
+          <div class="by-lang-selector__item">
+            <span>Português (Brasil)</span>
+          </div>
+          <div class="by-lang-selector__item">
+            <span>Português (Portugal)</span>
+          </div>
+          <div class="by-lang-selector__item"><span>Русский</span></div>
+          <div class="by-lang-selector__item"><span>Tiếng Việt</span></div>
+          <div class="by-lang-selector__item"><span>Türkçe</span></div>
+          <div class="by-lang-selector__item"><span>ไทย</span></div>
+          <div class="by-lang-selector__item"><span>Українська</span></div>
+          <div class="by-lang-selector__item"><span>العربيه</span></div>
+          <div class="by-lang-selector__item"><span>हिंदी</span></div>
+          <div class="by-lang-selector__item"><span>日本語</span></div>
+          <div class="by-lang-selector__item">
+            <span>简体中文 (马来西亚)</span>
+          </div>
+          <div class="by-lang-selector__item"><span>繁體中文</span></div>
+          <div class="by-lang-selector__item"><span>Polski</span></div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- Main Section -->
+      <section>
+        <div class="main-section">
+          <div class="main-section-left">
+            <div class="main-section-left-sidebar">
+              <ul>
+                <li>
+                  <p class="main-section-left-sidebar-link">
+                    <img
+                      src="https://www.bybit.com/user/assets/order/images/common/trades.svg"
+                      alt=""
+                    />
+                    <b>Spot</b>
+                    <span> <i class="far fa-angle-down"></i></span>
+                  </p>
+                  <div class="main-section-sidebar-dropdown">
+                    <ul>
+                      <li><a href="">NFT Orders</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p class="main-section-left-sidebar-link">
+                    <img
+                      src="https://www.bybit.com/user/assets/order/images/common/asset.svg"
+                      alt=""
+                    />
+                    <b>Unified Trading Account</b>
+                    <span> <i class="far fa-angle-down"></i></span>
+                  </p>
+                  <div class="main-section-sidebar-dropdown">
+                    <ul>
+                      <li><a href="">Spot Orders</a></li>
+                      <li><a href="">USDT Perpetual</a></li>
+                      <li><a href="">Spot Orders</a></li>
+                      <li><a href="">USDC Perpetual</a></li>
+                      <li><a href="">USDC Futures</a></li>
+                      <li><a href="">USDC Options</a></li>
+                      <li><a href="">Pre-upgrade Spot Orders</a></li>
+                      <li><a href="">Pre-upgrade Derivatives Orders</a></li>
+                      <li><a href="">Pre-upgrade USDC Perpetual Orders</a></li>
+                      <li><a href="">Pre-upgrade USDC Options Orders</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p class="main-section-left-sidebar-link">
+                    <img
+                      src="https://www.bybit.com/user/assets/order/images/common/ewards.svg"
+                      alt=""
+                    />
+                    <b>Inverse Derivatives</b>
+                    <span> <i class="far fa-angle-down"></i></span>
+                  </p>
+                  <div class="main-section-sidebar-dropdown">
+                    <ul>
+                      <li><a href="">Closed P&L</a></li>
+                      <li><a href="">Current Orders </a></li>
+                      <li><a href="">Orders History</a></li>
+                      <li><a href="">Trade History</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p class="main-section-left-sidebar-link">
+                    <img
+                      src="https://www.bybit.com/user/assets/order/images/common/strategy-history.svg"
+                      alt=""
+                    />
+                    <b>Tools History</b>
+                  </p>
+                </li>
+                <li>
+                  <p class="main-section-left-sidebar-link">
+                    <img
+                      src="https://www.bybit.com/user/assets/order/images/common/fiat.svg"
+                      alt=""
+                    />
+                    <b>Buy Crypto</b>
+                    <span> <i class="far fa-angle-down"></i></span>
+                  </p>
+                  <div class="main-section-sidebar-dropdown">
+                    <ul>
+                      <li><a href="">One Buy Click</a></li>
+                      <li><a href="">P2P </a></li>
+                      <li><a href="">Fiat Deposit</a></li>
+                      <li><a href="">Fiat Withdrawal</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p class="main-section-left-sidebar-link">
+                    <img
+                      src="https://www.bybit.com/user/assets/order/images/common/earnings.svg"
+                      alt=""
+                    />
+                    <b>Earn</b>
+                    <span> <i class="far fa-angle-down"></i></span>
+                  </p>
+                  <div class="main-section-sidebar-dropdown">
+                    <ul>
+                      <li><a href="">Bybit Savings</a></li>
+                      <li><a href="">Liquidity Mining</a></li>
+                      <li><a href="">Dual Asset</a></li>
+                      <li><a href="">Wealth Management</a></li>
+                      <li><a href="">Double-Win</a></li>
+                      <li><a href="">Shark Fin</a></li>
+                      <li><a href="">Launchpool</a></li>
+                      <li><a href="">DeFi Mining</a></li>
+                      <li><a href="">Cloud Mining</a></li>
+                      <li><a href="">DeFi Mining</a></li>
+                      <li><a href="">ETH 2.0</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <p class="main-section-left-sidebar-link">
+                    <img
+                      src="https://www.bybit.com/user/assets/order/images/common/borrows.svg"
+                      alt=""
+                    />
+                    <b>Loans</b>
+                    <span> <i class="far fa-angle-down"></i></span>
+                  </p>
+                  <div class="main-section-sidebar-dropdown">
+                    <ul>
+                      <li><a href="">Borrowings & Repayments</a></li>
+                      <li>
+                        <a href="">Collateral Amount Adjustment History</a>
+                      </li>
+                      <li><a href="">Liquidation History</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-section-right">Hassan Gondi</div>
+        </div>
+      </section>
+    </main>
+    <!-- Live Chat Btn -->
+    <div class="live-chat-btn">
+      <img
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00LjA2MDU4IDMuODAzNTZDMy4yODE1OSA0LjgwMDQgMy4wNDA5NSA2LjI3MDY3IDMuMDA0OTkgOC4zNzk4OEM0LjYyNTQyIDguMzc5MjIgNiA5LjY5NTYxIDYgMTEuMzgwN1YxMy42MTk5QzYgMTUuNDgzNiA0LjMxODYyIDE2Ljg5NjMgMi40ODI4NiAxNi41NzVDMS4wNDczNCAxNi4zMjM4IDAgMTUuMDc3MiAwIDEzLjYxOTlWMTEuMzgwN0MwIDEwLjQ5NjYgMC4zODU0NiA5LjY5MDA1IDEuMDA5MjEgOS4xMzYyN0MxLjAwMzE0IDkuMDkxNzEgMSA5LjA0NjIyIDEgOUMxIDYuNjEyNTEgMS4xNTYxMyA0LjI3MjE4IDIuNDg0NjkgMi41NzIwN0MzLjg2NDE1IDAuODA2ODMgNi4yNjM4NSAwIDkuOTk5OSAwQzEzLjczNTkgMCAxNi4xMzU3IDAuODA2ODMxIDE3LjUxNTIgMi41NzIwNUMxOC44NDM4IDQuMjcyMTYgMTkgNi42MTI0OSAxOSA5QzE5IDkuMDQ2MDQgMTguOTk2OSA5LjA5MTM1IDE4Ljk5MDkgOS4xMzU3NEMxOS42MTQ2IDkuNjg5NTIgMjAgMTAuNDk2IDIwIDExLjM4MDFWMTMuNjE5M0MyMCAxNC45MTQxIDE5LjE3MzMgMTYuMDQyNSAxNy45ODIgMTYuNDU0M0MxNy45MjM5IDE3LjE2NDIgMTcuNzE5OCAxNy44MDc3IDE3LjMwMTUgMTguMzQ3MUMxNi43OTgyIDE4Ljk5NjMgMTYuMDg0NiAxOS4zNjU1IDE1LjMwMjYgMTkuNTg3MUMxNC41Mjg3IDE5LjgwNjQgMTMuNjA2IDE5LjkwNDEgMTIuNTgwMyAxOS45NTJDMTEuNTUzMyAyMCAxMC4zNTc0IDIwIDkuMDE5MzEgMjBIOS4wMTkxNUg5QzguNDQ3NzEgMjAgOCAxOS41NTIzIDggMTlDOCAxOC40NDc3IDguNDQ3NzEgMTggOSAxOEMxMC4zNjA3IDE4IDExLjUxMTUgMTcuOTk5OCAxMi40ODcgMTcuOTU0MkMxMy40Njg4IDE3LjkwODQgMTQuMjA3OSAxNy44MTg2IDE0Ljc1NzMgMTcuNjYyOUMxNS4yOTg2IDE3LjUwOTUgMTUuNTcwMSAxNy4zMTYyIDE1LjcyMDkgMTcuMTIxNkMxNS44Mjg3IDE2Ljk4MjcgMTUuOTI3MSAxNi43NzU3IDE1Ljk3MjkgMTYuNDM5M0MxNC44MzYxIDE2LjAyMzUgMTQgMTQuOTMzNSAxNCAxMy42MTkzVjExLjM4MDFDMTQgOS42OTUwMiAxNS4zNzQ2IDguMzc4NjMgMTYuOTk1IDguMzc5MjlDMTYuOTU5IDYuMjcwNDIgMTYuNzE4MyA0LjgwMDMzIDE1LjkzOTMgMy44MDM1OEMxNS4xMzcgMi43NzY5MiAxMy41MzY3IDIgOS45OTk5IDJDNi40NjMxMSAyIDQuODYyODYgMi43NzY5MiA0LjA2MDU4IDMuODAzNTZaTTQgMTEuMzgwN0M0IDEwLjc1OTUgMy40Mzk1NCAxMC4yODg2IDIuODI3NjIgMTAuMzk1N0MyLjM0OTExIDEwLjQ3OTQgMiAxMC44OTQ5IDIgMTEuMzgwN1YxMy42MTk5QzIgMTQuMTA1NyAyLjM0OTExIDE0LjUyMTIgMi44Mjc2MiAxNC42MDQ5QzMuNDM5NTQgMTQuNzEyIDQgMTQuMjQxMSA0IDEzLjYxOTlWMTEuMzgwN1pNMTcuMTcyNCAxNC42MDQzQzE2LjU2MDUgMTQuNzExNCAxNiAxNC4yNDA1IDE2IDEzLjYxOTNWMTEuMzgwMUMxNiAxMC43NTg5IDE2LjU2MDUgMTAuMjg4IDE3LjE3MjQgMTAuMzk1MUMxNy42NTA5IDEwLjQ3ODggMTggMTAuODk0MyAxOCAxMS4zODAxVjEzLjYxOTNDMTggMTQuMTA1MSAxNy42NTA5IDE0LjUyMDYgMTcuMTcyNCAxNC42MDQzWiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="
+        alt=""
+      />
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="">Market Overview</a></li>
+            <li><a href="">Trading Fee</a></li>
+            <li><a href="">API</a></li>
+            <li><a href="">Help Center</a></li>
+          </ul>
+        </div>
+        <p class="footer-copyright">
+          © 2018-2023 Bybit.com. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- -->
+    <script src="./js/app.js"></script>
+    <script>
+      var modal = document.querySelector(".modal");
+      var trigger = document.querySelector(".trigger");
+      var closeButton = document.querySelector(".close-button");
+
+      function toggleModal() {
+        modal.classList.toggle("show-modal");
+      }
+
+      function windowOnClick(event) {
+        if (event.target === modal) {
+          toggleModal();
+        }
+      }
+
+      trigger.addEventListener("click", toggleModal);
+      closeButton.addEventListener("click", toggleModal);
+      window.addEventListener("click", windowOnClick);
+    </script>
+  </body>
+</html>
+
+<!-- down -->
+<!-- <i class="fas fa-caret-down"></i> -->
+<!-- up -->
+<!-- <i class="fas fa-caret-up"></i> -->
+<!-- fire -->
+<!-- <i class="fas fa-fire"></i> -->
+<!-- down -->
+<!-- <i class="far fa-angle-down"></i> -->
