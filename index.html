@@ -590,11 +590,79 @@
             </div>
           </nav>
         </div>
+        <!------------- Header Searchbar ------------->
         <div class="header-searchbar">
           <div class="header-searchbar-input">
             <input type="text" placeholder="Search Coin" />
           </div>
         </div>
+        <!----------- Header Deposit Button ----------->
+
+        <button class="deposit-btn"><a href="">Deposit</a></button>
+
+        <!---------- Header Assets -------------->
+        <div class="assets-btn">
+          <a href="">Assets</a>
+          <div class="assets-btn-dropdown">
+            <div class="assets-overview">
+              <h4>Assets Overview <i class="far fa-eye"></i></h4>
+              <a href="">
+                <b
+                  >32.26
+                  <span> USD</span>
+                </b>
+                <span>≈ 0.0000038 BTC</span>
+              </a>
+            </div>
+            <span>*Data may be delayed</span>
+            <div class="siderbar-btns">
+              <button>
+                <a href=""><i class="far fa-arrow-to-bottom"></i>Deposit</a>
+              </button>
+              <button>
+                <a href=""><i class="far fa-arrow-to-top"></i>Withdraw</a>
+              </button>
+            </div>
+
+            <div class="assets-btn-dropdown-part-3">
+              <span>Account</span>
+              <ul>
+                <li>
+                  <a href=""> Funding Account</a>
+                </li>
+
+                <li>
+                  <a href=""> Unified Trading Account</a>
+                </li>
+                <li>
+                  <a href=""> Inverse Derivatives Account</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="assets-btn-dropdown-part-3">
+              <span>Invested Products</span>
+              <ul>
+                <li><a href="Earn">Earn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!----------- Header Orders ----------->
+        <div class="orders-btn">
+          <a href="">Orders</a>
+          <div class="orders-btn-dropdown">
+            <ul>
+              <li><a href="">Unified Trading Order</a></li>
+              <li><a href="">Inversse Derivatives Order</a></li>
+              <li><a href="">Buy Crypto Order</a></li>
+              <li><a href="">Earn Order</a></li>
+              <li><a href="">Loan Order</a></li>
+            </ul>
+          </div>
+        </div>
+        <!----------- Header Sidebar ---------->
         <div class="sidebar-btn">
           <div class="sidebar-btn-link">
             <img src="./assets/kyc.png" alt="" />
@@ -698,6 +766,7 @@
             </div>
           </div>
         </div>
+        <!-------- Header Notification ----------->
         <div class="notifications-btn">
           <div class="notifications-btn-link">
             <i class="far fa-bell"></i>
@@ -763,6 +832,7 @@
             </div>
           </div>
         </div>
+        <!--------- Header Download --------->
         <div class="download-btn">
           <div class="download-btn-link">
             <i class="fal fa-arrow-to-bottom"></i>
@@ -776,12 +846,13 @@
             <button><a href="">More Download Options</a></button>
           </div>
         </div>
+        <!-- -----Header Select Language----- -->
         <div class="select-lang-btn trigger">
           <div class="select-lang-btn-link"><i class="fal fa-globe"></i></div>
         </div>
       </div>
     </header>
-    <!-- modal -->
+    <!--------- Modal -------->
     <div class="modal">
       <div class="modal-content">
         <span class="close-button"><i class="fal fa-times"></i></span>
@@ -836,13 +907,15 @@
             <div class="main-section-left-sidebar">
               <ul>
                 <li>
-                  <p class="main-section-left-sidebar-link">
+                  <p class="main-section-left-sidebar-link main-sidebar-link">
                     <img
                       src="https://www.bybit.com/user/assets/order/images/common/trades.svg"
                       alt=""
                     />
                     <b>Spot</b>
-                    <span> <i class="far fa-angle-down"></i></span>
+                    <span class="main-section-sidebar-link-caret">
+                      <i class="far fa-angle-down"></i
+                    ></span>
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
@@ -851,18 +924,22 @@
                   </div>
                 </li>
                 <li>
-                  <p class="main-section-left-sidebar-link">
+                  <p class="main-section-left-sidebar-link main-sidebar-link">
                     <img
                       src="https://www.bybit.com/user/assets/order/images/common/asset.svg"
                       alt=""
                     />
                     <b>Unified Trading Account</b>
-                    <span> <i class="far fa-angle-down"></i></span>
+                    <span class="main-section-sidebar-link-caret">
+                      <i class="far fa-angle-down"></i
+                    ></span>
                   </p>
-                  <div class="main-section-sidebar-dropdown">
+                  <div class="main-section-sidebar-dropdown sidebar-link-open">
                     <ul>
                       <li><a href="">Spot Orders</a></li>
-                      <li><a href="">USDT Perpetual</a></li>
+                      <li class="current-main-sidebar-link">
+                        <a href="">USDT Perpetual</a>
+                      </li>
                       <li><a href="">Spot Orders</a></li>
                       <li><a href="">USDC Perpetual</a></li>
                       <li><a href="">USDC Futures</a></li>
@@ -875,13 +952,15 @@
                   </div>
                 </li>
                 <li>
-                  <p class="main-section-left-sidebar-link">
+                  <p class="main-section-left-sidebar-link main-sidebar-link">
                     <img
                       src="https://www.bybit.com/user/assets/order/images/common/ewards.svg"
                       alt=""
                     />
                     <b>Inverse Derivatives</b>
-                    <span> <i class="far fa-angle-down"></i></span>
+                    <span class="main-section-sidebar-link-caret">
+                      <i class="far fa-angle-down"></i
+                    ></span>
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
@@ -902,13 +981,15 @@
                   </p>
                 </li>
                 <li>
-                  <p class="main-section-left-sidebar-link">
+                  <p class="main-section-left-sidebar-link main-sidebar-link">
                     <img
                       src="https://www.bybit.com/user/assets/order/images/common/fiat.svg"
                       alt=""
                     />
                     <b>Buy Crypto</b>
-                    <span> <i class="far fa-angle-down"></i></span>
+                    <span class="main-section-sidebar-link-caret">
+                      <i class="far fa-angle-down"></i
+                    ></span>
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
@@ -920,13 +1001,15 @@
                   </div>
                 </li>
                 <li>
-                  <p class="main-section-left-sidebar-link">
+                  <p class="main-section-left-sidebar-link main-sidebar-link">
                     <img
                       src="https://www.bybit.com/user/assets/order/images/common/earnings.svg"
                       alt=""
                     />
                     <b>Earn</b>
-                    <span> <i class="far fa-angle-down"></i></span>
+                    <span class="main-section-sidebar-link-caret">
+                      <i class="far fa-angle-down"></i
+                    ></span>
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
@@ -945,13 +1028,15 @@
                   </div>
                 </li>
                 <li>
-                  <p class="main-section-left-sidebar-link">
+                  <p class="main-section-left-sidebar-link main-sidebar-link">
                     <img
                       src="https://www.bybit.com/user/assets/order/images/common/borrows.svg"
                       alt=""
                     />
                     <b>Loans</b>
-                    <span> <i class="far fa-angle-down"></i></span>
+                    <span class="main-section-sidebar-link-caret">
+                      <i class="far fa-angle-down"></i
+                    ></span>
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
@@ -966,7 +1051,133 @@
               </ul>
             </div>
           </div>
-          <div class="main-section-right">Hassan Gondi</div>
+          <div class="main-section-right">
+            <div class="main-section-heading">
+              <h2>USDT Perpetual</h2>
+              <button type="button">
+                <i class="fal fa-notes-medical"></i>
+                <span>Pre-upgrade Closed P&amp;L</span>
+              </button>
+            </div>
+
+            <div class="tabination">
+              <button class="tab-btn selected-tab">Closed P&L</button>
+              <button class="tab-btn">Current Orders</button>
+              <button class="tab-btn">Order History</button>
+              <button class="tab-btn">Trade History</button>
+            </div>
+
+            <div class="tab-content-container">
+              <div class="tab-content">
+                <div class="tab-content-inputs">
+                  <div>
+                    <label for="">Contracts</label>
+                    <br />
+                    <select name="cars" id="cars">
+                      <option value="volvo">All</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+
+                  <button class="reset-btn">Reset</button>
+                </div>
+                <div class="tab-content-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Contracts</th>
+                        <th>Closing Direction</th>
+                        <th>Qty</th>
+                        <th>Entry Price</th>
+                        <th>Exit Price</th>
+                        <th>Closed P&L</th>
+                        <th>Exit Type</th>
+                        <th>Trade Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Contracts</td>
+                        <td>Closing Direction</td>
+                        <td>Qty</td>
+                        <td>Entry Price</td>
+                        <td>Exit Price</td>
+                        <td>Closed P&L</td>
+                        <td>Exit Type</td>
+                        <td>Trade Time</td>
+                      </tr>
+                      <tr>
+                        <td>Contracts</td>
+                        <td>Closing Direction</td>
+                        <td>Qty</td>
+                        <td>Entry Price</td>
+                        <td>Exit Price</td>
+                        <td>Closed P&L</td>
+                        <td>Exit Type</td>
+                        <td>Trade Time</td>
+                      </tr>
+                      <tr>
+                        <td>Contracts</td>
+                        <td>Closing Direction</td>
+                        <td>Qty</td>
+                        <td>Entry Price</td>
+                        <td>Exit Price</td>
+                        <td>Closed P&L</td>
+                        <td>Exit Type</td>
+                        <td>Trade Time</td>
+                      </tr>
+                      <tr>
+                        <td>Contracts</td>
+                        <td>Closing Direction</td>
+                        <td>Qty</td>
+                        <td>Entry Price</td>
+                        <td>Exit Price</td>
+                        <td>Closed P&L</td>
+                        <td>Exit Type</td>
+                        <td>Trade Time</td>
+                      </tr>
+                      <tr>
+                        <td>Contracts</td>
+                        <td>Closing Direction</td>
+                        <td>Qty</td>
+                        <td>Entry Price</td>
+                        <td>Exit Price</td>
+                        <td>Closed P&L</td>
+                        <td>Exit Type</td>
+                        <td>Trade Time</td>
+                      </tr>
+                      <tr>
+                        <td>Contracts</td>
+                        <td>Closing Direction</td>
+                        <td>Qty</td>
+                        <td>Entry Price</td>
+                        <td>Exit Price</td>
+                        <td>Closed P&L</td>
+                        <td>Exit Type</td>
+                        <td>Trade Time</td>
+                      </tr>
+                      <tr>
+                        <td>Contracts</td>
+                        <td>Closing Direction</td>
+                        <td>Qty</td>
+                        <td>Entry Price</td>
+                        <td>Exit Price</td>
+                        <td>Closed P&L</td>
+                        <td>Exit Type</td>
+                        <td>Trade Time</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <span
+                  >* Only the latest 10,000 records from the last six (6) months
+                  are displayed.</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -995,33 +1206,5 @@
     </footer>
     <!-- -->
     <script src="./js/app.js"></script>
-    <script>
-      var modal = document.querySelector(".modal");
-      var trigger = document.querySelector(".trigger");
-      var closeButton = document.querySelector(".close-button");
-
-      function toggleModal() {
-        modal.classList.toggle("show-modal");
-      }
-
-      function windowOnClick(event) {
-        if (event.target === modal) {
-          toggleModal();
-        }
-      }
-
-      trigger.addEventListener("click", toggleModal);
-      closeButton.addEventListener("click", toggleModal);
-      window.addEventListener("click", windowOnClick);
-    </script>
   </body>
 </html>
-
-<!-- down -->
-<!-- <i class="fas fa-caret-down"></i> -->
-<!-- up -->
-<!-- <i class="fas fa-caret-up"></i> -->
-<!-- fire -->
-<!-- <i class="fas fa-fire"></i> -->
-<!-- down -->
-<!-- <i class="far fa-angle-down"></i> -->
