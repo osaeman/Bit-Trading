@@ -62,7 +62,17 @@ a {
   color: unset;
   text-decoration: none;
 }
-
+body::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
+  background-color: #c4c4c4; /* Dark grey color for the track */
+  height: 8px;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #858585; /* Light grey color for the thumb */
+  border: 2px solid #858585; /* Add a border to the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
 /*-------- header--------- */
 header {
   width: 100%;
@@ -81,11 +91,18 @@ header {
 .header-logo img {
   width: 56px;
   height: 22px;
-  margin-right: 22px;
+  margin: 0 10px;
 }
 /* ------------Header Block------------ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
 .header-block {
-  padding: 0 25px 0 16px;
+  padding: 0 25px 0 10px;
   cursor: pointer;
   height: 100%;
   display: flex;
@@ -134,6 +151,7 @@ header {
   border-bottom-right-radius: 10px;
   display: none;
   box-shadow: 4px 4px 10px rgba(23, 24, 30, 0.3);
+  z-index: 99;
 }
 .header-block-menu-dropdown-container {
   display: grid;
@@ -1210,12 +1228,16 @@ header {
   width: 100%;
   height: calc(100vh - 50px);
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(11, 1fr);
 }
 
 .main-section-left {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   border-right: 1px solid #e3e3e3;
+  position: fixed;
+  top: 50px;
+  width: 270px;
+  left: 0;
 }
 .main-section-left-sidebar {
   height: 90vh;
@@ -1278,9 +1300,11 @@ header {
   display: block;
 }
 .main-section-right {
-  grid-column: 4 / span 11;
+  grid-column: 3 / span 9;
   padding: 25px 35px;
-  margin-bottom: 55px;
+  padding-top: 75px;
+  padding-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .main-section-heading {
@@ -1354,7 +1378,8 @@ header {
 .tab-content-inputs > div > select:focus {
   background-color: rgb(237, 237, 237);
 }
-.reset-btn {
+
+.tab-content-input-btn {
   outline: none;
   border: none;
   background-color: transparent;
@@ -1366,13 +1391,27 @@ header {
   margin-left: 20px;
   cursor: pointer;
 }
-.reset-btn:hover {
+.tab-content-input-btn:hover {
   color: var(--input-txt);
+}
+.export-btn {
+  margin-left: auto;
 }
 .tab-content-table {
   margin-top: 20px;
-  height: 280px;
+  min-height: 280px;
   overflow-x: auto;
+}
+.tab-content-table::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
+  background-color: #c4c4c4; /* Dark grey color for the track */
+  height: 8px;
+  border-radius: 10px;
+}
+.tab-content-table::-webkit-scrollbar-thumb {
+  background-color: #858585; /* Light grey color for the thumb */
+  border: 2px solid #858585; /* Add a border to the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
 }
 .tab-content-table table {
   border-collapse: collapse;
@@ -1383,15 +1422,55 @@ header {
   background-color: var(--input-bg);
   color: var(--input-txt);
   font-weight: 400;
-  padding: 12px 14px;
-  width: 150px !important;
+  padding: 12px 70px 12px 8px;
+  width: max-content;
   text-align: left;
 }
-.tab-content span {
+.tab-content-table thead tr th:last-child {
+  text-align: right;
+}
+.tab-content-table tbody tr {
+  border-bottom: 1px solid #f2f1f1;
+}
+.tab-content-table tbody tr:hover {
+  background-color: var(--input-bg);
+}
+.tab-content-table tbody tr td {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 12px 70px 12px 10px;
+  width: max-content;
+  text-align: left;
+}
+.td-red {
+  color: var(--notification-bg);
+}
+.tab-content > span {
   font-size: 1.2rem;
   color: var(--input-txt);
   margin-top: 15px;
+  font-weight: 600;
   display: block;
+}
+.prev-nxt-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.prev-nxt-btns button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #e7e6e6;
+  padding: 10px 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  color: var(--input-txt);
+  box-shadow: 4px 4px 10px rgba(23, 24, 30, 0.05);
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 /* ---------Footer------- */
 footer {
