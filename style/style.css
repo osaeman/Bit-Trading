@@ -1,5 +1,6 @@
 /* For Headings */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 /* For Main Layout */
 
 /* -----CSS Default Reset----- */
@@ -38,7 +39,8 @@ html {
 }
 
 body {
-  font-family: "IBM Plex Sans", sans-serif;
+  /* font-family: "IBM Plex Sans", sans-serif; */
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.35;
@@ -1227,12 +1229,9 @@ header {
 .main-section {
   width: 100%;
   height: calc(100vh - 50px);
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
 }
 
 .main-section-left {
-  grid-column: 1 / span 2;
   border-right: 1px solid #e3e3e3;
   position: fixed;
   top: 50px;
@@ -1300,8 +1299,8 @@ header {
   display: block;
 }
 .main-section-right {
-  grid-column: 3 / span 9;
-  padding: 25px 35px;
+  margin-left: 270px;
+  padding: 0 35px;
   padding-top: 75px;
   padding-bottom: 80px;
   margin-bottom: 50px;
@@ -1352,6 +1351,7 @@ header {
   border-bottom: 3px solid var(--yellow);
   color: var(--primary-color-04);
 }
+/* ----------------------------------------------------------------------------------- */
 .tab-content-inputs {
   display: flex;
   flex-direction: row;
@@ -1374,11 +1374,189 @@ header {
   background-color: var(--input-bg);
 }
 
-.tab-content-inputs > div > select:hover,
-.tab-content-inputs > div > select:focus {
+.custom-input:hover,
+.custom-input:focus {
   background-color: rgb(237, 237, 237);
 }
+.custom-select {
+  display: inline-block;
+  font-size: 14px;
+  color: #888;
+}
+.custom-input-container {
+  width: 100%;
+  position: relative;
+}
+.custom-input {
+  display: block;
+  border: none;
+  width: 150px;
+  min-height: 35px;
+  background: var(--input-bg);
+  border-radius: 5px;
+  outline: none;
+  padding: 0 20px 0 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-weight: 400;
+  -ms-appearance: none;
+  font-size: 1.3rem;
+}
 
+.custom-input-container::after {
+  content: "";
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: var(--input-txt);
+  display: inline-block;
+  border-radius: 2px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 30;
+}
+
+.custom-input-options {
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  background: white;
+  color: var(--primary-color-02);
+  font-weight: 400;
+  border-radius: 8px;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  box-shadow: 4px 4px 20px rgba(23, 24, 30, 0.2);
+  left: 0;
+  top: 113%;
+  max-height: 250px;
+  overflow-y: auto;
+  display: none;
+}
+.custom-input-options-show {
+  display: block;
+}
+.custom-input-options::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+  background-color: white; /* Dark grey color for the track */
+  height: 8px;
+  border-radius: 10px;
+}
+.custom-input-options::-webkit-scrollbar-thumb {
+  background-color: #858585; /* Light grey color for the thumb */
+  border: 2px solid #858585; /* Add a border to the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+.custom-input-options ul li {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+.custom-input-options ul li:first-child {
+  color: var(--yellow);
+  text-align: left;
+  font-weight: 500;
+}
+.custom-input-options ul li:hover {
+  background: var(--input-bg);
+}
+.date-picker {
+  display: block;
+  border: none;
+  width: 250px;
+  min-height: 35px;
+  background: var(--input-bg);
+  border-radius: 5px;
+  outline: none;
+  padding: 0 20px 0 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-weight: 500;
+  -ms-appearance: none;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-left: 20px;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: var(--yellow) !important;
+}
+
+.daterangepicker td.in-range {
+  background-color: rgb(255, 228, 173) !important;
+  border-top: 5px solid white !important;
+  border-bottom: 5px solid white !important;
+}
+.daterangepicker td.end-date {
+  background-color: var(--yellow) !important;
+}
+.daterangepicker .calendar-table th {
+  width: 36px !important;
+  height: 36px !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+.daterangepicker .calendar-table td {
+  width: 36px !important;
+  height: 28px !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+}
+
+.daterangepicker th.month {
+  font-weight: 500 !important;
+}
+.daterangepicker .calendar-table .next span,
+.daterangepicker .calendar-table .prev span {
+  border-right: solid var(--input-txt) !important;
+  border-bottom: solid var(--input-txt) !important;
+  border-width: 0 1px 1px 0 !important;
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.daterangepicker .drp-buttons .btn {
+  padding: 10px 20px !important;
+  background-color: var(--yellow);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.daterangepicker .drp-buttons .btn:hover {
+  background-color: var(--input-bg);
+}
+.daterangepicker .drp-selected {
+  display: inline-block;
+  font-size: 13px !important;
+  padding-right: 8px;
+  font-weight: 400 !important;
+  letter-spacing: 0.5px !important;
+}
+.daterangepicker {
+  border-radius: 8px !important;
+  border: none !important;
+  padding: 8px !important;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 15px;
+  line-height: 1em;
+  box-shadow: 4px 4px 20px rgba(23, 24, 30, 0.2);
+}
+/* -------------------------------------------------- */
 .tab-content-input-btn {
   outline: none;
   border: none;
@@ -1415,19 +1593,31 @@ header {
 }
 .tab-content-table table {
   border-collapse: collapse;
-  width: max-content;
+  min-width: max-content;
+  width: calc(100vw - 340px);
 }
 .tab-content-table thead tr th {
   font-size: 1.2rem;
   background-color: var(--input-bg);
   color: var(--input-txt);
   font-weight: 400;
-  padding: 12px 70px 12px 8px;
+  padding: 12px 50px 12px 12px;
   width: max-content;
   text-align: left;
 }
-.tab-content-table thead tr th:last-child {
-  text-align: right;
+.tab-content-table thead tr th {
+  font-size: 1.2rem;
+  background-color: var(--input-bg);
+  color: var(--input-txt);
+  font-weight: 400;
+  padding: 12px 70px 12px 12px;
+  width: max-content;
+  text-align: left;
+}
+.tab-content-table thead tr th:last-child,
+.tab-content-table tbody tr td:last-child {
+  text-align: right !important;
+  padding: 12px 15px 12px 12px;
 }
 .tab-content-table tbody tr {
   border-bottom: 1px solid #f2f1f1;
@@ -1438,7 +1628,7 @@ header {
 .tab-content-table tbody tr td {
   font-size: 1.4rem;
   font-weight: 500;
-  padding: 12px 70px 12px 10px;
+  padding: 12px 70px 12px 12px;
   width: max-content;
   text-align: left;
 }
@@ -1471,6 +1661,21 @@ header {
   margin-left: 20px;
   cursor: pointer;
   font-size: 1.3rem;
+}
+.empty-table {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  display: none;
+}
+.empty-table span {
+  font-size: 1.2rem;
+  color: var(--input-txt);
+  font-weight: 600;
+  margin-top: 10px;
 }
 /* ---------Footer------- */
 footer {

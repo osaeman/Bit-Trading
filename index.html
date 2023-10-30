@@ -40,6 +40,13 @@
     />
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   </head>
   <body>
     <!---------- Header----------->
@@ -1061,25 +1068,50 @@
             </div>
 
             <div class="tabination">
-              <button class="tab-btn selected-tab">Closed P&L</button>
-              <button class="tab-btn">Current Orders</button>
-              <button class="tab-btn">Order History</button>
-              <button class="tab-btn">Trade History</button>
+              <button class="tab-btn selected-tab tabination_btn">
+                Closed P&L
+              </button>
+              <button class="tab-btn tabination_btn">Current Orders</button>
+              <button class="tab-btn tabination_btn">Order History</button>
+              <button class="tab-btn tabination_btn">Trade History</button>
             </div>
 
             <div class="tab-content-container">
               <div class="tab-content">
                 <div class="tab-content-inputs">
                   <div>
-                    <label for="">Contracts</label>
+                    <label class="custom-select"> Contracts </label>
                     <br />
-                    <select name="cars" id="cars">
-                      <option value="volvo">All</option>
-                      <option value="saab">Saab</option>
-                      <option value="opel">Opel</option>
-                      <option value="audi">Audi</option>
-                    </select>
+                    <div class="custom-input-container">
+                      <input type="text" value="All" class="custom-input" />
+                      <div class="custom-input-options">
+                        <ul>
+                          <li class="custom-input-li">All</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10005LADUSDT</li>
+                          <li class="custom-input-li">10010LADUSDT</li>
+                          <li class="custom-input-li">10015LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">100030LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                          <li class="custom-input-li">10000LADUSDT</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
+                  <input
+                    class="date-picker"
+                    type="text"
+                    name="daterange"
+                    value="01/01/2018 - 01/15/2018"
+                  />
 
                   <button class="reset-btn tab-content-input-btn">Reset</button>
                   <button class="export-btn tab-content-input-btn">
@@ -1100,7 +1132,7 @@
                         <th>Trade Time</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-body">
                       <tr>
                         <td>ETHUSDT</td>
                         <td class="td-red">Close Long</td>
@@ -1153,6 +1185,13 @@
                       </tr>
                     </tbody>
                   </table>
+                  <div class="empty-table">
+                    <img
+                      src="https://bybit.com/derivatives/order/images/common/empty.svg"
+                      alt=""
+                    />
+                    <span>No Records Found</span>
+                  </div>
                 </div>
 
                 <span
@@ -1193,6 +1232,7 @@
       </div>
     </footer>
     <!-- -->
+
     <script src="./js/app.js"></script>
   </body>
 </html>
