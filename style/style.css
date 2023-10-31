@@ -1538,6 +1538,19 @@ header {
   .ant-picker-active-bar {
   background: var(--yellow) !important;
 }
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker
+  .ant-picker-input
+  > input {
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+}
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker
+  .ant-picker-input
+  > input::placeholder {
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  color: var(--navbar-bg) !important;
+}
 /* -------------------------------------------------- */
 .tab-content-input-btn {
   outline: none;
