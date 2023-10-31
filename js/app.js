@@ -122,11 +122,6 @@ custom_input_options.addEventListener("mouseleave", () => {
 });
 
 // Date Picker
-$(function () {
-  $('input[name="daterange"]').daterangepicker({
-    opens: "left",
-  });
-});
 
 // Tabination Toggle Swicth
 

@@ -40,13 +40,14 @@
     />
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/responsive.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
-    />
-    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/dayjs@1/dayjs.min.js"></script>
+    <script src="https://unpkg.com/antd@5.9.0./antd-with-locales.js"></script>
+    <script src="https://unpkg.com/@ant-design/icons./index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/antd/dist/antd.js"></script>
   </head>
   <body>
     <!---------- Header----------->
@@ -1062,7 +1063,19 @@
             <div class="main-section-heading">
               <h2>USDT Perpetual</h2>
               <button type="button">
-                <i class="fal fa-notes-medical"></i>
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="Header_upgradeIcon__OOyto"
+                >
+                  <path
+                    d="M6.667 5.333h4a.667.667 0 0 0 0-1.333h-4a.667.667 0 0 0 0 1.333ZM5.333 8h5.334a.667.667 0 0 0 0-1.333H5.333a.667.667 0 0 0 0 1.333Zm0 2.667h5.334a.667.667 0 0 0 0-1.334H5.333a.667.667 0 1 0 0 1.334Zm8-9.334H2.667A.667.667 0 0 0 2 2v12a.667.667 0 0 0 1.067.533l1.38-1.033 1.373 1.033a.666.666 0 0 0 .8 0L8 13.5l1.38 1.033a.666.666 0 0 0 .8 0l1.373-1.033 1.38 1.033A.667.667 0 0 0 14 14V2a.666.666 0 0 0-.667-.667Zm-.666 11.334-.714-.534a.667.667 0 0 0-.8 0L9.78 13.167 8.4 12.133a.667.667 0 0 0-.8 0l-1.38 1.034-1.373-1.034a.667.667 0 0 0-.8 0l-.714.534v-10h9.334v10Z"
+                    fill="currentColor"
+                  ></path>
+                            
+                </svg>
                 <span>Pre-upgrade Closed P&amp;L</span>
               </button>
             </div>
@@ -1083,7 +1096,12 @@
                     <label class="custom-select"> Contracts </label>
                     <br />
                     <div class="custom-input-container">
-                      <input type="text" value="All" class="custom-input" />
+                      <input
+                        type="text"
+                        value="All"
+                        class="custom-input"
+                        readonly
+                      />
                       <div class="custom-input-options">
                         <ul>
                           <li class="custom-input-li">All</li>
@@ -1106,12 +1124,16 @@
                       </div>
                     </div>
                   </div>
-                  <input
-                    class="date-picker"
-                    type="text"
-                    name="daterange"
-                    value="01/01/2018 - 01/15/2018"
-                  />
+                  <div>
+                    <div>
+                      <div id="container1" class="date date-picker">
+                        <script>
+                          const mountNode1 =
+                            document.getElementById("container1");
+                        </script>
+                      </div>
+                    </div>
+                  </div>
 
                   <button class="reset-btn tab-content-input-btn">Reset</button>
                   <button class="export-btn tab-content-input-btn">
@@ -1234,5 +1256,51 @@
     <!-- -->
 
     <script src="./js/app.js"></script>
+    <script>
+      let from_date = null;
+      let to_date = null;
+
+      ("use strict");
+      const { DatePicker, Space } = antd;
+      const { RangePicker } = DatePicker;
+
+      const createDatePicker = (mountNodeId) => {
+        const container = document.getElementById(mountNodeId);
+
+        const handleDateChange = (dates, dateStrings) => {
+          // Display the selected date using alert
+          // alert(`Selected Date in ${mountNodeId}: ${dateStrings[0]} to ${dateStrings[1]}`);
+
+          from_date = dateStrings[0];
+          to_date = dateStrings[1];
+
+          getPage(1);
+        };
+
+        const rangePicker = document.createElement("div");
+        container.appendChild(rangePicker);
+
+        ReactDOM.render(
+          React.createElement(
+            Space,
+            { direction: "vertical", size: 12 },
+            React.createElement(RangePicker, { onChange: handleDateChange })
+          ),
+          rangePicker
+        );
+      };
+
+      const mountNodes = [
+        "container1",
+        "mountNode22",
+        "mountNode33",
+        "mountNode44",
+        "mountNode55",
+      ];
+
+      mountNodes.forEach((mountNode) => {
+        createDatePicker(mountNode);
+      });
+    </script>
   </body>
 </html>

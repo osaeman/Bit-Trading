@@ -1324,9 +1324,11 @@ header {
   outline: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-.main-section-heading button i {
-  margin-right: 5px;
+.main-section-heading button svg {
+  margin-right: 6px;
 }
 .tabination {
   border-bottom: 1px solid #edebeb;
@@ -1471,12 +1473,11 @@ header {
 .custom-input-options ul li:hover {
   background: var(--input-bg);
 }
+/* date picker */
 .date-picker {
-  display: block;
+  /* display: block;
   border: none;
-  width: 250px;
-  min-height: 35px;
-  background: var(--input-bg);
+
   border-radius: 5px;
   outline: none;
   padding: 0 20px 0 10px;
@@ -1488,73 +1489,54 @@ header {
   font-weight: 500;
   -ms-appearance: none;
   font-size: 1.3rem;
-  text-align: center;
+  text-align: center; */
   margin-left: 20px;
 }
-.daterangepicker td.active,
-.daterangepicker td.active:hover {
-  background-color: var(--yellow) !important;
-}
-
-.daterangepicker td.in-range {
-  background-color: rgb(255, 228, 173) !important;
-  border-top: 5px solid white !important;
-  border-bottom: 5px solid white !important;
-}
-.daterangepicker td.end-date {
-  background-color: var(--yellow) !important;
-}
-.daterangepicker .calendar-table th {
-  width: 36px !important;
-  height: 36px !important;
-  font-weight: 400 !important;
-  font-size: 14px !important;
-}
-.daterangepicker .calendar-table td {
-  width: 36px !important;
-  height: 28px !important;
-  font-weight: 300 !important;
-  font-size: 14px !important;
-}
-
-.daterangepicker th.month {
-  font-weight: 500 !important;
-}
-.daterangepicker .calendar-table .next span,
-.daterangepicker .calendar-table .prev span {
-  border-right: solid var(--input-txt) !important;
-  border-bottom: solid var(--input-txt) !important;
-  border-width: 0 1px 1px 0 !important;
-  height: 10px !important;
-  width: 10px !important;
-}
-
-.daterangepicker .drp-buttons .btn {
-  padding: 10px 20px !important;
-  background-color: var(--yellow);
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.daterangepicker .drp-buttons .btn:hover {
-  background-color: var(--input-bg);
-}
-.daterangepicker .drp-selected {
-  display: inline-block;
-  font-size: 13px !important;
-  padding-right: 8px;
-  font-weight: 400 !important;
-  letter-spacing: 0.5px !important;
-}
-.daterangepicker {
-  border-radius: 8px !important;
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker {
+  width: 250px !important;
+  min-height: 35px !important;
+  color: rgba(0, 0, 0, 1) !important;
+  background: var(--input-bg) !important;
   border: none !important;
-  padding: 8px !important;
-  font-family: "Roboto", sans-serif !important;
-  font-size: 15px;
-  line-height: 1em;
-  box-shadow: 4px 4px 20px rgba(23, 24, 30, 0.2);
+  outline: none !important;
+  transition: none !important;
+}
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-focused.ant-picker {
+  box-shadow: none !important;
+}
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-today
+  .ant-picker-cell-inner::before {
+  border: none !important;
+}
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-selected
+  .ant-picker-cell-inner,
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-start
+  .ant-picker-cell-inner,
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-end
+  .ant-picker-cell-inner {
+  background: var(--yellow) !important;
+}
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-in-range::before {
+  background: rgb(255, 228, 173) !important;
+}
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-start:not(
+    .ant-picker-cell-range-start-single
+  )::before,
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-end:not(
+    .ant-picker-cell-range-end-single
+  )::before {
+  background: rgb(255, 228, 173) !important;
+}
+:where(.css-dev-only-do-not-override-qgg3xn).ant-picker-range
+  .ant-picker-active-bar {
+  background: var(--yellow) !important;
 }
 /* -------------------------------------------------- */
 .tab-content-input-btn {
