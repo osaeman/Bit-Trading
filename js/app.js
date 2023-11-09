@@ -104,9 +104,11 @@ window.addEventListener("click", windowOnClick);
 const custom_input_options = document.querySelector(".custom-input-options");
 const custom_input = document.querySelector(".custom-input");
 const custom_input_li = document.querySelectorAll(".custom-input-li");
+const custom_input_icon = document.querySelector(".custom-input-down-i");
 
 custom_input.addEventListener("click", () => {
   custom_input_options.classList.add("custom-input-options-show");
+  custom_input_icon.style.display = "none";
 });
 
 custom_input_li.forEach((item, index) => {
@@ -119,9 +121,8 @@ custom_input_li.forEach((item, index) => {
 
 custom_input_options.addEventListener("mouseleave", () => {
   custom_input_options.classList.remove("custom-input-options-show");
+  custom_input_icon.style.display = "block";
 });
-
-// Date Picker
 
 // Tabination Toggle Swicth
 
@@ -140,24 +141,20 @@ tabination_btn.forEach((item, index) => {
         table_body.style.display = "block";
         empty_table.style.display = "none";
         item.classList.add("selected-tab");
-        console.log("Osama");
         return;
       case 1:
-        console.log("Weds");
         table_body.style.display = "none";
         empty_table.style.display = "flex";
         item.classList.add("selected-tab");
 
         return;
       case 2:
-        console.log("Eman");
         table_body.style.display = "none";
         empty_table.style.display = "flex";
         item.classList.add("selected-tab");
 
         return;
       case 3:
-        console.log("IA");
         table_body.style.display = "none";
         empty_table.style.display = "flex";
         item.classList.add("selected-tab");

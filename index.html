@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Website Title -->
-    <title>BYBIT Trading</title>
-    <!-- 
-    <meta
+    <title>Bybit | Trading Platform</title>
+
+    <!-- <meta
       name="keywords"
       content=""
     />
@@ -18,13 +18,13 @@
     <meta name="author" content="" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
-    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="nositelinkssearchbox" /> -->
 
     <link
       rel="shortcut icon"
-      href="./assets/default-favicon.ico"
+      href="./assets/favicon-32x32.png"
       type="image/x-icon"
-    /> -->
+    />
 
     <!-- Google Fonts -->
     <!-- Preconnecting can help reduce the latency when actual requests are made to this domain, such as when fetching font resources. -->
@@ -928,7 +928,9 @@
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
-                      <li><a href="">NFT Orders</a></li>
+                      <li>
+                        <span data-href="">NFT Orders</span>
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -945,18 +947,28 @@
                   </p>
                   <div class="main-section-sidebar-dropdown sidebar-link-open">
                     <ul>
-                      <li><a href="">Spot Orders</a></li>
+                      <li><span data-href="">Spot Orders</span></li>
                       <li class="current-main-sidebar-link">
-                        <a href="">USDT Perpetual</a>
+                        <span data-href="">USDT Perpetual</span>
                       </li>
-                      <li><a href="">Spot Orders</a></li>
-                      <li><a href="">USDC Perpetual</a></li>
-                      <li><a href="">USDC Futures</a></li>
-                      <li><a href="">USDC Options</a></li>
-                      <li><a href="">Pre-upgrade Spot Orders</a></li>
-                      <li><a href="">Pre-upgrade Derivatives Orders</a></li>
-                      <li><a href="">Pre-upgrade USDC Perpetual Orders</a></li>
-                      <li><a href="">Pre-upgrade USDC Options Orders</a></li>
+                      <li><span data-href="">Spot Orders</span></li>
+                      <li><span data-href="">USDC Perpetual</span></li>
+                      <li><span data-href="">USDC Futures</span></li>
+                      <li><span data-href="">USDC Options</span></li>
+                      <li><span data-href="">Pre-upgrade Spot Orders</span></li>
+                      <li>
+                        <span data-href="">Pre-upgrade Derivatives Orders</span>
+                      </li>
+                      <li>
+                        <span data-href=""
+                          >Pre-upgrade USDC Perpetual Orders</span
+                        >
+                      </li>
+                      <li>
+                        <span data-href=""
+                          >Pre-upgrade USDC Options Orders</span
+                        >
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -973,10 +985,10 @@
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
-                      <li><a href="">Closed P&L</a></li>
-                      <li><a href="">Current Orders </a></li>
-                      <li><a href="">Orders History</a></li>
-                      <li><a href="">Trade History</a></li>
+                      <li><span data-href="">Closed P&L</span></li>
+                      <li><span data-href="">Current Orders </span></li>
+                      <li><span data-href="">Orders History</span></li>
+                      <li><span data-href="">Trade History</span></li>
                     </ul>
                   </div>
                 </li>
@@ -1002,10 +1014,10 @@
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
-                      <li><a href="">One Buy Click</a></li>
-                      <li><a href="">P2P </a></li>
-                      <li><a href="">Fiat Deposit</a></li>
-                      <li><a href="">Fiat Withdrawal</a></li>
+                      <li><span data-href="">One Buy Click</span></li>
+                      <li><span data-href="">P2P </span></li>
+                      <li><span data-href="">Fiat Deposit</span></li>
+                      <li><span data-href="">Fiat Withdrawal</span></li>
                     </ul>
                   </div>
                 </li>
@@ -1022,17 +1034,17 @@
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
-                      <li><a href="">Bybit Savings</a></li>
-                      <li><a href="">Liquidity Mining</a></li>
-                      <li><a href="">Dual Asset</a></li>
-                      <li><a href="">Wealth Management</a></li>
-                      <li><a href="">Double-Win</a></li>
-                      <li><a href="">Shark Fin</a></li>
-                      <li><a href="">Launchpool</a></li>
-                      <li><a href="">DeFi Mining</a></li>
-                      <li><a href="">Cloud Mining</a></li>
-                      <li><a href="">DeFi Mining</a></li>
-                      <li><a href="">ETH 2.0</a></li>
+                      <li><span data-href="">Bybit Savings</span></li>
+                      <li><span data-href="">Liquidity Mining</span></li>
+                      <li><span data-href="">Dual Asset</span></li>
+                      <li><span data-href="">Wealth Management</span></li>
+                      <li><span data-href="">Double-Win</span></li>
+                      <li><span data-href="">Shark Fin</span></li>
+                      <li><span data-href="">Launchpool</span></li>
+                      <li><span data-href="">DeFi Mining</span></li>
+                      <li><span data-href="">Cloud Mining</span></li>
+                      <li><span data-href="">DeFi Mining</span></li>
+                      <li><span data-href="">ETH 2.0</span></li>
                     </ul>
                   </div>
                 </li>
@@ -1049,11 +1061,13 @@
                   </p>
                   <div class="main-section-sidebar-dropdown">
                     <ul>
-                      <li><a href="">Borrowings & Repayments</a></li>
+                      <li><span data-href="">Borrowings & Repayments</span></li>
                       <li>
-                        <a href="">Collateral Amount Adjustment History</a>
+                        <span data-href=""
+                          >Collateral Amount Adjustment History</span
+                        >
                       </li>
-                      <li><a href="">Liquidation History</a></li>
+                      <li><span data-href="">Liquidation History</span></li>
                     </ul>
                   </div>
                 </li>
@@ -1167,17 +1181,7 @@
                             <div class="td-contracts-tooltip">
                               <a href="">
                                 <div>
-                                  <svg
-                                    viewBox="64 64 896 896"
-                                    focusable="false"
-                                    data-icon="link"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      d="M574 665.4a8.03 8.03 0 00-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 00-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 000 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 000 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 00-11.3 0L372.3 598.7a8.03 8.03 0 000 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"
-                                    ></path>
-                                  </svg>
+                                  <i class="fas fa-paperclip"></i>
                                 </div>
                                 <span></span>
                               </a>
@@ -1197,8 +1201,6 @@
                             width="100"
                             height="100"
                             viewBox="0 0 128 128"
-                            stroke-width="5"
-                            stroke="#adb1b8"
                           >
                             <path
                               d="M 84 11 C 82.3 11 81 12.3 81 14 C 81 15.7 82.3 17 84 17 L 106.80078 17 L 60.400391 63.400391 C 59.200391 64.600391 59.200391 66.499609 60.400391 67.599609 C 61.000391 68.199609 61.8 68.5 62.5 68.5 C 63.2 68.5 63.999609 68.199609 64.599609 67.599609 L 111 21.199219 L 111 44 C 111 45.7 112.3 47 114 47 C 115.7 47 117 45.7 117 44 L 117 14 C 117 12.3 115.7 11 114 11 L 84 11 z M 24 31 C 16.8 31 11 36.8 11 44 L 11 104 C 11 111.2 16.8 117 24 117 L 84 117 C 91.2 117 97 111.2 97 104 L 97 59 C 97 57.3 95.7 56 94 56 C 92.3 56 91 57.3 91 59 L 91 104 C 91 107.9 87.9 111 84 111 L 24 111 C 20.1 111 17 107.9 17 104 L 17 44 C 17 40.1 20.1 37 24 37 L 69 37 C 70.7 37 72 35.7 72 34 C 72 32.3 70.7 31 69 31 L 24 31 z"
@@ -1216,17 +1218,7 @@
                             <div class="td-contracts-tooltip">
                               <a href="">
                                 <div>
-                                  <svg
-                                    viewBox="64 64 896 896"
-                                    focusable="false"
-                                    data-icon="link"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      d="M574 665.4a8.03 8.03 0 00-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 00-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 000 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 000 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 00-11.3 0L372.3 598.7a8.03 8.03 0 000 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"
-                                    ></path>
-                                  </svg>
+                                  <i class="fas fa-paperclip"></i>
                                 </div>
                                 <span></span>
                               </a>
@@ -1247,8 +1239,6 @@
                             width="100"
                             height="100"
                             viewBox="0 0 128 128"
-                            stroke-width="5"
-                            stroke="#adb1b8"
                           >
                             <path
                               d="M 84 11 C 82.3 11 81 12.3 81 14 C 81 15.7 82.3 17 84 17 L 106.80078 17 L 60.400391 63.400391 C 59.200391 64.600391 59.200391 66.499609 60.400391 67.599609 C 61.000391 68.199609 61.8 68.5 62.5 68.5 C 63.2 68.5 63.999609 68.199609 64.599609 67.599609 L 111 21.199219 L 111 44 C 111 45.7 112.3 47 114 47 C 115.7 47 117 45.7 117 44 L 117 14 C 117 12.3 115.7 11 114 11 L 84 11 z M 24 31 C 16.8 31 11 36.8 11 44 L 11 104 C 11 111.2 16.8 117 24 117 L 84 117 C 91.2 117 97 111.2 97 104 L 97 59 C 97 57.3 95.7 56 94 56 C 92.3 56 91 57.3 91 59 L 91 104 C 91 107.9 87.9 111 84 111 L 24 111 C 20.1 111 17 107.9 17 104 L 17 44 C 17 40.1 20.1 37 24 37 L 69 37 C 70.7 37 72 35.7 72 34 C 72 32.3 70.7 31 69 31 L 24 31 z"
@@ -1266,17 +1256,7 @@
                             <div class="td-contracts-tooltip">
                               <a href="">
                                 <div>
-                                  <svg
-                                    viewBox="64 64 896 896"
-                                    focusable="false"
-                                    data-icon="link"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      d="M574 665.4a8.03 8.03 0 00-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 00-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 000 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 000 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 00-11.3 0L372.3 598.7a8.03 8.03 0 000 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"
-                                    ></path>
-                                  </svg>
+                                  <i class="fas fa-paperclip"></i>
                                 </div>
                                 <span></span>
                               </a>
@@ -1296,8 +1276,6 @@
                             width="100"
                             height="100"
                             viewBox="0 0 128 128"
-                            stroke-width="5"
-                            stroke="#adb1b8"
                           >
                             <path
                               d="M 84 11 C 82.3 11 81 12.3 81 14 C 81 15.7 82.3 17 84 17 L 106.80078 17 L 60.400391 63.400391 C 59.200391 64.600391 59.200391 66.499609 60.400391 67.599609 C 61.000391 68.199609 61.8 68.5 62.5 68.5 C 63.2 68.5 63.999609 68.199609 64.599609 67.599609 L 111 21.199219 L 111 44 C 111 45.7 112.3 47 114 47 C 115.7 47 117 45.7 117 44 L 117 14 C 117 12.3 115.7 11 114 11 L 84 11 z M 24 31 C 16.8 31 11 36.8 11 44 L 11 104 C 11 111.2 16.8 117 24 117 L 84 117 C 91.2 117 97 111.2 97 104 L 97 59 C 97 57.3 95.7 56 94 56 C 92.3 56 91 57.3 91 59 L 91 104 C 91 107.9 87.9 111 84 111 L 24 111 C 20.1 111 17 107.9 17 104 L 17 44 C 17 40.1 20.1 37 24 37 L 69 37 C 70.7 37 72 35.7 72 34 C 72 32.3 70.7 31 69 31 L 24 31 z"
@@ -1315,17 +1293,7 @@
                             <div class="td-contracts-tooltip">
                               <a href="">
                                 <div>
-                                  <svg
-                                    viewBox="64 64 896 896"
-                                    focusable="false"
-                                    data-icon="link"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      d="M574 665.4a8.03 8.03 0 00-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 00-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 000 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 000 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 00-11.3 0L372.3 598.7a8.03 8.03 0 000 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"
-                                    ></path>
-                                  </svg>
+                                  <i class="fas fa-paperclip"></i>
                                 </div>
                                 <span></span>
                               </a>
@@ -1346,8 +1314,6 @@
                             width="100"
                             height="100"
                             viewBox="0 0 128 128"
-                            stroke-width="5"
-                            stroke="#adb1b8"
                           >
                             <path
                               d="M 84 11 C 82.3 11 81 12.3 81 14 C 81 15.7 82.3 17 84 17 L 106.80078 17 L 60.400391 63.400391 C 59.200391 64.600391 59.200391 66.499609 60.400391 67.599609 C 61.000391 68.199609 61.8 68.5 62.5 68.5 C 63.2 68.5 63.999609 68.199609 64.599609 67.599609 L 111 21.199219 L 111 44 C 111 45.7 112.3 47 114 47 C 115.7 47 117 45.7 117 44 L 117 14 C 117 12.3 115.7 11 114 11 L 84 11 z M 24 31 C 16.8 31 11 36.8 11 44 L 11 104 C 11 111.2 16.8 117 24 117 L 84 117 C 91.2 117 97 111.2 97 104 L 97 59 C 97 57.3 95.7 56 94 56 C 92.3 56 91 57.3 91 59 L 91 104 C 91 107.9 87.9 111 84 111 L 24 111 C 20.1 111 17 107.9 17 104 L 17 44 C 17 40.1 20.1 37 24 37 L 69 37 C 70.7 37 72 35.7 72 34 C 72 32.3 70.7 31 69 31 L 24 31 z"
@@ -1365,17 +1331,7 @@
                             <div class="td-contracts-tooltip">
                               <a href="">
                                 <div>
-                                  <svg
-                                    viewBox="64 64 896 896"
-                                    focusable="false"
-                                    data-icon="link"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      d="M574 665.4a8.03 8.03 0 00-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 00-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 000 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 000 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 00-11.3 0L372.3 598.7a8.03 8.03 0 000 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"
-                                    ></path>
-                                  </svg>
+                                  <i class="fas fa-paperclip"></i>
                                 </div>
                                 <span></span>
                               </a>
@@ -1396,8 +1352,6 @@
                             width="100"
                             height="100"
                             viewBox="0 0 128 128"
-                            stroke-width="5"
-                            stroke="#adb1b8"
                           >
                             <path
                               d="M 84 11 C 82.3 11 81 12.3 81 14 C 81 15.7 82.3 17 84 17 L 106.80078 17 L 60.400391 63.400391 C 59.200391 64.600391 59.200391 66.499609 60.400391 67.599609 C 61.000391 68.199609 61.8 68.5 62.5 68.5 C 63.2 68.5 63.999609 68.199609 64.599609 67.599609 L 111 21.199219 L 111 44 C 111 45.7 112.3 47 114 47 C 115.7 47 117 45.7 117 44 L 117 14 C 117 12.3 115.7 11 114 11 L 84 11 z M 24 31 C 16.8 31 11 36.8 11 44 L 11 104 C 11 111.2 16.8 117 24 117 L 84 117 C 91.2 117 97 111.2 97 104 L 97 59 C 97 57.3 95.7 56 94 56 C 92.3 56 91 57.3 91 59 L 91 104 C 91 107.9 87.9 111 84 111 L 24 111 C 20.1 111 17 107.9 17 104 L 17 44 C 17 40.1 20.1 37 24 37 L 69 37 C 70.7 37 72 35.7 72 34 C 72 32.3 70.7 31 69 31 L 24 31 z"
@@ -1426,7 +1380,7 @@
                   are displayed.</span
                 >
                 <div class="prev-nxt-btns">
-                  <button class="" disabled>previous</button>
+                  <button class="" disabled>Previous</button>
                   <button class="prev-nxt-allowed">Next</button>
                 </div>
               </div>
