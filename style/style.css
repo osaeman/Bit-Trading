@@ -63,6 +63,7 @@ svg {
 a {
   color: unset;
   text-decoration: none;
+  cursor: pointer;
 }
 body::-webkit-scrollbar {
   width: 10px; /* Adjust the width as needed */
@@ -1753,7 +1754,7 @@ header {
 }
 .empty-table span {
   font-size: 1.2rem;
-  color: var(--input-txt);
+  color: #adb1b8;
   font-weight: 600;
   margin-top: 10px;
 }
